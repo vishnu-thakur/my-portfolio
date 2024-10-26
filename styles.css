@@ -1,0 +1,481 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Dark Theme Styles */
+body.dark {
+    background-color: #222;
+    color: #fff;
+}
+
+body.dark header {
+    background-color: #444;
+}
+
+body.dark footer {
+    background-color: #444;
+}
+
+body.dark nav ul li a {
+    color: #fff;
+}
+
+body.dark nav ul li a:hover {
+    color: #f0db4f;
+}
+
+body.dark #contact a {
+    color: #fff;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #6d208b;
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #f0db4f;
+}
+.para p {
+    margin-bottom: 15px; /* Adjust spacing between paragraphs */
+}
+
+
+/* Section Styles */
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.para {
+    text-align: left;
+}
+
+/* About Section */
+#about {
+    padding: 100px 20px; /* Maintain existing padding */
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%); /* Add background gradient */
+    color: #fff; /* Light text color for better contrast */
+}
+
+#projects, #contact {
+    background-color: #f0f0f0; /* Keep the existing background for projects and contact sections */
+}
+
+/* Profile Image Styles */
+.about-content {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center content horizontally */
+    max-width: 1200px; /* Limit max width for larger screens */
+    margin: 0 auto; /* Center the flex container */
+}
+
+#white {
+    color: white; /* Heading color */
+    font-size: 2.5rem; /* Increase font size for better visibility */
+    margin-bottom: 30px; /* Add space below the heading */
+}
+
+/* Profile Image Styles */
+.profile-img {
+    width: 200px; /* Set width */
+    height: 200px; /* Keep height equal to width for a circle */
+    border-radius: 50%; /* Make it circular */
+    margin-right: 20px; /* Space between image and text */
+    border: 4px solid #6d208b; /* Border color and thickness */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for effects */
+}
+
+
+.profile-img:hover {
+    transform: scale(1.1); /* Slightly enlarge image on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
+}
+/* Vertical Oval Profile Image */
+.profile-img-vertical {
+    width: 250px; /* Set width larger for vertical effect */
+    height: 350px; /* Set height to make it taller */
+    border-radius: 50%; /* Make it oval */
+    margin-right: 20px; /* Space between image and text */
+    border: 4px solid #6d208b; /* Border color and thickness */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for effects */
+}
+
+.profile-img-vertical:hover {
+    transform: scale(1.1); /* Slightly enlarge image on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
+}
+
+
+/* About Content Styles */
+.para {
+    max-width: 600px; /* Limit width of the text for better readability */
+    line-height: 1.6; /* Increase line height for better readability */
+    text-align: left; /* Align text to the left */
+    margin-left: 20px; /* Space between text and image */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .profile-img {
+        margin-right: 0; /* Remove margin on smaller screens */
+        margin-bottom: 20px; /* Space below image on small screens */
+    }
+
+    .para {
+        text-align: center; /* Center text on smaller screens */
+        margin-left: 0; /* Reset margin */
+    }
+}
+
+
+/* Projects Section */
+#projects {
+    background-image: url('path/to/your/background-image.jpg'); /* Update with your image path */
+    background-size: cover; /* Makes the background cover the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    padding: 100px 20px; /* Maintains existing padding */
+    color: #121212f6; /* Adjust text color for visibility */
+    position: relative; /* Necessary for pseudo-element overlay */
+}
+
+/* Optional: Add a dark overlay for better text contrast */
+#projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);/* Adjust the opacity as needed */
+    z-index: 1; /* Ensure the overlay is behind the content */
+}
+
+/* Ensure project content is visible above the overlay */
+.project-grid {
+    position: relative; /* Ensures it stacks above the overlay */
+    z-index: 2; /* Moves content above the overlay */
+}
+
+
+/* Theme Toggle */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#themeButton {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#themeButton:hover {
+    background-color: #555;
+}
+
+/* Skills Section Styles */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+#si {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.skill-card {
+    background-color: #fff; /* White background for each skill */
+    color: #333; /* Dark text for readability */
+    border: 2px solid #6d208b; /* Border color matching the theme */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px 20px; /* Padding for spacing */
+    margin: 10px; /* Margin around each card */
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+    position: relative; /* Relative positioning for pseudo-elements */
+    font-weight: bold; /* Bold text for emphasis */
+    width: 150px; /* Fixed width for each skill card */
+    text-align: center; /* Center text */
+}
+
+.skill-card:before, .skill-card:after {
+    content: '['; /* Adding left bracket before */
+    position: absolute; /* Absolute positioning */
+    font-size: 20px; /* Bracket size */
+    left: -25px; /* Position left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical alignment */
+    color: #6d208b; /* Bracket color matching the theme */
+}
+
+.skill-card:after {
+    content: ']'; /* Adding right bracket after */
+    right: -25px; /* Position right */
+    left: auto; /* Reset left positioning */
+}
+
+/* Hover Effect */
+.skill-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+/* Projects Section Styles */
+/* Projects Section Styles */
+#projects h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center; /* Center-aligns the heading */
+    z-index: 2; /* Ensures it appears above the overlay */
+    position: relative; /* For stacking above the overlay */
+}
+
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.project-card {
+    background-color: #fff; /* Card background */
+    border: 2px solid #6d208b; /* Card border color */
+    border-radius: 10px; /* Rounded corners */
+    margin: 15px; /* Space around each card */
+    width: 300px; /* Fixed width for project cards */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth scale transition */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.project-image {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.project-content {
+    padding: 15px; /* Padding inside project card */
+    text-align: left; /* Left-align text */
+}
+/* Contact Section */
+#contact {
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#contact h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 2.5rem; /* Increased heading size */
+}
+
+/* Form Styles */
+#contactForm {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Flexbox for Form Row */
+.form-row {
+    display: flex;
+    justify-content: space-between; /* Align items side by side */
+    margin-bottom: 15px; /* Space between rows */
+}
+
+/* Input Data Container */
+.input-data {
+    display: flex;
+    flex-direction: column; /* Stack label and input */
+    flex: 1; /* Grow to fill space */
+    margin-right: 15px; /* Space between fields */
+}
+
+/* Remove margin for the last element */
+.input-data:last-child {
+    margin-right: 0; /* No margin on the last element */
+}
+
+/* Form Inputs and Textarea */
+#contactForm input,
+#contactForm textarea {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 12px;
+    margin-top: 5px; /* Space between label and input */
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus State */
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: #6d208b; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Form Labels */
+#contactForm label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Submit Button */
+#contactForm input[type="submit"] {
+    background-color: #6d208b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* Space above submit button */
+}
+
+#contactForm input[type="submit"]:hover {
+    background-color: #5a1678;
+}
+
+/* Success Message */
+#successMessage {
+    background-color: rgba(92, 184, 92, 0.9);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Background color same as other sections */
+#social {
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%); /* Same gradient as other sections */
+    padding: 50px 20px;
+    text-align: center; /* Center the heading */
+}
+
+#social h3 {
+    font-size: 1.8rem; /* Increase heading size */
+    color: #f5efef; /* Change this to match your theme */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center; /* Center the links */
+    gap: 20px; /* Space between links */
+    margin-top: 10px; /* Space above the links */
+}
+
+.social-links a {
+    display: flex; /* Use flex to align icon and text */
+    align-items: center; /* Center the icon and text vertically */
+    color: #f5efef; /* Light color for contrast against the background */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px; /* Add some padding around the links */
+    border-radius: 5px; /* Slightly rounded corners for the links */
+    transition: background-color 0.3s ease; /* Smooth background change */
+}
+
+.social-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+    color: #f0db4f; /* Change text color on hover */
+}
+
+.social-icon {
+    width: 24px; /* Set width for icons */
+    height: 24px; /* Set height for icons */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+
+
+
+
+
+
+.project-description {
+    color: #555; /* Lighter color for project description */
+    font-size: 14px; /* Font size for description */
+}
+
+/* Responsive Design for Projects */
+@media screen and (max-width: 768px) {
+    .project-card {
+        width: 90%; /* Full width on smaller screens */
+    }
+}
+

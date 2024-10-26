@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishnu Kumar's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+  
+  <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#social">Social</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+   
+    <section id="about">
+        <div>
+            <h1 id="white" style="text-align: center;">About Me</h1>
+            <div class="about-content">
+                <img src="vishnu.jpeg" alt="Your Image" class="profile-img-vertical">
+
+
+                <div class="para">
+                    <p>Hello! I'm Vishnu Kumar, a recent B.Tech graduate in Computer Science and Technology,
+                        specializing in development, from GLA University.</p>
+
+                    <p>My academic journey has provided me with a robust foundation in computer science, along with
+                        hands-on experience in building innovative solutions to complex technical challenges.</p>
+
+                    <p>Proficient in multiple programming languages and development methodologies, I have a passion for
+                        developing user-centric, efficient applications. I continuously strive to stay up-to-date with
+                        the latest technologies and enjoy working on projects that push the boundaries of what’s
+                        possible in software development.</p>
+
+                    <p>I am currently interning at Hindustan Wellness Company, where I am gaining practical experience
+                        in software development and learning to apply my academic knowledge in real-world scenarios.
+                        This internship has provided me with the opportunity to work on collaborative projects and
+                        develop my problem-solving skills.</p>
+
+                    <p>Throughout my education, I have completed several significant projects, including a network
+                        security setup using Cisco Packet Tracer, where I demonstrated various cyber-attack scenarios
+                        and implemented effective countermeasures. This experience has deepened my understanding of
+                        network security and software development.</p>
+
+                    <p>Looking ahead, I am eager to carve out a successful career in software development. I aspire to
+                        work in dynamic environments where I can contribute to innovative projects and make a positive
+                        impact through technology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+   <!-- Projects Section -->
+<section id="projects">
+    <h1>Projects</h1>
+    <div class="project-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+            <img src="Security.png" alt="Project 1 Image" class="project-image">
+            <div class="project-content">
+                <h3>Network Security Threats</h3>
+                <p class="project-description"><strong>Location: USA</strong><br>
+                    <strong>Duration: October 2022 – November 2022</strong><br>
+                    During this project, I focused on identifying and addressing network security threats and vulnerabilities. Leveraging Cisco Packet Tracer, I set up practical demonstrations of common network attacks, including Man-in-the-Middle (MitM), ARP spoofing, and Denial of Service (DoS). These simulations allowed me to evaluate and implement various countermeasures, including firewall setup and DHCP configuration, to protect network integrity. This project sharpened my skills in network security and real-world defense strategies.
+                </p>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <img src="web.png" alt="Project 2 Image" class="project-image">
+            <div class="project-content">
+                <h3>Cybernoites Website Development</h3>
+                <p class="project-description"><strong>Location: Mathura</strong><br>
+                    <strong>Duration: May 2016 – December 2016</strong><br>
+                    As part of the Job Oriented Value-Added Course, I developed a responsive website called “Cybernoites.” The project emphasized user experience and was optimized for seamless functionality across different devices, ensuring a smooth and engaging interaction for users on mobile, tablet, and desktop screens. This project enhanced my front-end development skills and taught me how to create user-focused, adaptive designs.
+                </p>
+            </div>
+        </div>
+
+        <!-- Add more project cards as needed -->
+    </div>
+</section>
+
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h1 id="si">Skills</h1>
+            <div class="skills-grid">
+                <div class="skill-card">HTML</div>
+                <div class="skill-card">CSS</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">React.js</div>
+                <div class="skill-card">Node.js</div>
+                <div class="skill-card">Python</div>
+                <div class="skill-card">SQL</div>
+                <div class="skill-card">Network Security</div>
+                <div class="skill-card">Responsive Web Design</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="text"><h1>Contact Me</h1></div>
+            <form id="contactForm" action="https://formspree.io/f/xwpkpzdz" method="POST">
+                <div class="form-row">
+                    <div class="input-data">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="input-data">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="underline"></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-data">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                        <div class="underline"></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-data textarea">
+                        <label for="message">Write your message</label>
+                        <textarea id="message" name="message" rows="8" required></textarea>
+                        <div class="underline"></div>
+                    </div>
+                </div>
+                <div class="form-row submit-btn">
+                    <div class="input-data">
+                        <div class="inner"></div>
+                        <input type="submit" value="Send Message">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Success Message Popup -->
+    <div id="successMessage" style="display:none;">
+        <p>Your message has been sent successfully!</p>
+    </div>
+    
+
+
+
+    <!-- Social Links Section -->
+    <section id="social">
+        <h3>Connect with Me</h3>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/yourprofile" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://twitter.com/yourprofile" target="_blank">
+                <i class="fab fa-twitter"></i> Twitter
+            </a>
+            <a href="https://medium.com/@yourprofile" target="_blank">
+                <i class="fab fa-medium"></i> Medium
+            </a>
+            <a href="https://dev.to/yourprofile" target="_blank">
+                <i class="fab fa-dev"></i> Dev.to
+            </a>
+            <a href="https://yourwebsite.com" target="_blank">
+                <i class="fas fa-blog"></i> My Blog
+            </a>
+        </div>
+    </section>
+    
+    
+
+    </div>
+    </section>
+
+
+    <!-- Script for Dark Mode -->
+    <script src="script.js"></script>
+</body>
+
+</html>
